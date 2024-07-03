@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+        <img src="images/portfolio.png" alt="" class="logo">
+        <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="contact.html">Contact</a></li>
+        </ul>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I'm <span>Miracle</span> <br> from Nigeria</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------About----------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about pix.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Miracle stephen, A Software and A Grahpic designer. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam quae saepe est dignissimos accusamus distinctio eius cumque quis aut ratione!</p>
+                    
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Eperience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>Video Editor</span> <br> desinging Web/App interface</li>
+                            <li> <span> Web Developer</span> <br> Web App Development</li>
+                            <li> <span>App Development</span> <br>Building Android/iOS app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>currently a</span> <br> SoftWare Developer</li>
+                            <li> <span> Web Developer</span> <br> Web App Development</li>
+                            <li> <span>App Development</span> <br>Building Android/iOS app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>2012-2015</span> <br>senior secondary school</li>
+                            <li> <span>2019-2023</span> <br>higher institution</li>
+                            <li> <span>2021-2022</span> <br>undergoing training </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementById('tab-links')
+        var tabcontents = document.getElementById('tab-contents')
+
+
+        function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    } 
+    event.currentTarget.classList.add("active-link")
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+
+    </script>
+
+</body>
+</html>
